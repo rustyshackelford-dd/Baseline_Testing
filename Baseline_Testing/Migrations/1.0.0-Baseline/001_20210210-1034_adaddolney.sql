@@ -1,26 +1,6 @@
 ﻿-- <Migration ID="ee059bbd-272b-4899-9640-53049560162c" />
 GO
 
-DECLARE @associate bit
-SELECT @associate = CASE SERVERPROPERTY('EngineEdition') WHEN 5 THEN 1 ELSE 0 END
-IF @associate = 0 EXEC sp_executesql N'SELECT @count = COUNT(*) FROM master.dbo.syslogins WHERE loginname = N''deployment''', N'@count bit OUT', @associate OUT
-IF @associate = 1
-BEGIN
-    PRINT N'Creating user [deployment] and mapping to the login [deployment]'
-    CREATE USER [deployment] FOR LOGIN [deployment]
-END
-ELSE
-BEGIN
-    PRINT N'Creating user [deployment] without login'
-    CREATE USER [deployment] WITHOUT LOGIN
-END
-GO
-PRINT N'Altering members of role db_owner'
-GO
-ALTER ROLE [db_owner] ADD MEMBER [deployment]
-GO
-PRINT N'Creating [dbo].[AGENTS]'
-GO
 CREATE TABLE [dbo].[AGENTS]
 (
 [AGENT_CODE] [varchar] (6) NOT NULL,
