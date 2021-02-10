@@ -157,6 +157,9 @@
   <PropertyGroup Condition="$(AppDataPath)==''">
     <AppDataPath>$(APPDATA)</AppDataPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <Provisioner>CustomScripts</Provisioner>
+  </PropertyGroup>
   <Import Condition="Exists('$(SqlChangeAutomationTargetsPath)')" Project="$(SqlChangeAutomationTargetsPath)" />
   <Import Condition="!Exists('$(SqlChangeAutomationTargetsPath)')" Project="$(MSBuildExtensionsPath)\SqlChangeAutomation\SqlChangeAutomation.Data.Schema.Ssdt.targets" />
   <ItemGroup>
