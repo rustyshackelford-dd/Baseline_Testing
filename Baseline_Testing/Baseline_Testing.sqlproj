@@ -179,6 +179,8 @@
     <None Include="Schema-Model\Security\Users\deployment.sql" />
     <None Include="Migrations\1.0.0-Baseline\002_20210210-1108_adaddolney.sql" />
     <None Include="Schema-Model\dbo\Tables\LostSeaLimbo.sql" />
+    <None Include="Migrations\1.0.0-Baseline\003_20210210-1145_adaddolney.sql" />
+    <None Include="Schema-Model\dbo\Tables\NOT_LostSeaLimbo.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Pre-Deployment\01_Initialize_Deployment.sql" />
