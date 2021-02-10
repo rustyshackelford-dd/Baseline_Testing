@@ -177,6 +177,8 @@
     <None Include="Schema-Model\dbo\Tables\ORDERS.sql" />
     <None Include="Schema-Model\Security\Roles\db_owner.sql" />
     <None Include="Schema-Model\Security\Users\deployment.sql" />
+    <None Include="Migrations\1.0.0-Baseline\002_20210210-1108_adaddolney.sql" />
+    <None Include="Schema-Model\dbo\Tables\LostSeaLimbo.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Pre-Deployment\01_Initialize_Deployment.sql" />
