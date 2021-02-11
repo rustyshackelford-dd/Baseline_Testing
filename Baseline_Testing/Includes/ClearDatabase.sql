@@ -7,4 +7,6 @@ GO
 DROP DATABASE [Baseline_Testing]
 GO
 
+CREATE DATABASE [Baseline_Testing]
+GO
 
