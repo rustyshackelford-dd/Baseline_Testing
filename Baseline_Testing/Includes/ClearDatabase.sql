@@ -1,12 +1,5 @@
-USE [master]
+USE [Baseline_Testing]
 GO
 
-ALTER DATABASE [Baseline_Testing] SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+TRUNCATE TABLE dbo.ORDERS
 GO
-
-DROP DATABASE [Baseline_Testing]
-GO
-
-CREATE DATABASE [Baseline_Testing]
-GO
-
