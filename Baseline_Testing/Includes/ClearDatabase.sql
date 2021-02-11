@@ -1,0 +1,10 @@
+USE [master]
+GO
+
+ALTER DATABASE [Baseline_Testing] SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+GO
+
+DROP DATABASE [Baseline_Testing]
+GO
+
+

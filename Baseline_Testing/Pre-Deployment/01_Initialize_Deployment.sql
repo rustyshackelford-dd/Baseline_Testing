@@ -9,3 +9,8 @@ Pre-Deployment Script Template
                SELECT * FROM [$(TableName)]
 --------------------------------------------------------------------------------------
 */
+
+
+PRINT 'The following output is from an external file:'
+:r $(DeployPath)Includes\ClearDatabase.sql
+GO
